@@ -128,7 +128,7 @@ header{
     }
     .box>.txt>a{font-size:12px;}
     .box>.text{
-        padding:30px 20px 30px 20px;
+        padding:30px 20px;
     }
     .box:nth-child(3)>.text{
         border-left:1px solid #999;
@@ -146,4 +146,19 @@ header{
         justify-content:center;
     }
     #title>.logo{padding:0;}
+
+    .box{
+        width:100%;
+    }
+    .box>.txt{
+        padding:30px 40px;
+    }
+    .box>.text{
+        padding:30px 40px;
+        text-align:center;
+    }
+    .box:nth-child(3)>.text{
+        border:0;
+        border-top:1px solid #999;
+    }
 }
