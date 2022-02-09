@@ -1,0 +1,149 @@
+header{
+    max-width:1000px;
+    margin:auto;
+}
+#topNav{
+    display:flex;
+    justify-content:center;
+    line-height:50px;
+    font-size:12px;
+    border-bottom:1px solid #999;
+}
+.gnb{
+    display:flex;
+}
+.gnb>li{margin:0 10px;}
+
+#title{
+    display:flex;
+    justify-content:space-between;
+    padding:40px 0 40px 0;
+    border-bottom:1px solid #999;
+}
+#title>.left{
+    text-align:right;
+    border-right:1px solid #999;
+    padding:0 20px 0 10px;
+}
+#title>.right{
+    text-align:left;
+    border-left:1px solid #999;
+    padding:0 10px 0 20px;
+}
+#title p{
+    font-size:12px;
+}
+#title>.logo{
+    font-size:26px;
+    font-weight:bold;
+    padding-top:15px;
+}
+
+#contents{
+    max-width:800px;
+    margin:auto;
+    padding:40px 0;
+}
+#contents::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.box{
+    width:50%;
+    float:left;
+}
+.box>img{
+    display:block;
+    margin:auto;
+    width:70%;
+}
+.box>.txt{
+    padding:30px 50px;
+}
+.box>.txt::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.box>.text{
+    padding:0 50px 30px 50px;
+}
+.box>.txt>a{
+    display:block;
+    float:right;
+    font-size:14px;
+    margin-top:20px;
+}
+
+.box h3{
+    font-size:17px;
+    padding-bottom:10px;
+}
+.box p{
+    font-size:14px;
+}
+
+.box:nth-child(1){
+    border-right:1px solid #999;
+}
+.box:nth-child(2){
+    border-bottom:1px solid #999;
+}
+.box:nth-child(3) h3{
+    margin-top:30px;
+}
+
+/*====================*/
+/*브라우저의 넓이가 768px 이하 일 때*/
+@media screen and (max-width:768px){
+    #title{
+        padding:30px 0 30px 0;
+    }
+    #title>.logo{
+        font-size:20px;
+        padding-top:20px;
+    }
+    #title p{
+        font-size:11px;
+    }
+    #contents{
+        max-width:500px;
+    }
+   
+    .box:nth-child(1){
+        width:100%;
+        margin:auto;
+        border:0;
+    }
+    .box:nth-child(2){
+        border:0;
+    }
+    .box:nth-child(3) h3{
+        margin:0;
+    }
+    .box>.txt{
+        border-bottom:1px solid #999;
+        padding:30px 70px;
+    }
+    .box>.txt>a{font-size:12px;}
+    .box>.text{
+        padding:30px 20px 30px 20px;
+    }
+    .box:nth-child(3)>.text{
+        border-left:1px solid #999;
+    }
+    .box h3{font-size:12px;}
+    .box p{font-size:11px;}
+}
+/*브라우저의 넓이가 480px 이하 일 때*/
+@media screen and (max-width:480px){
+    #topNav{font-size:11px;}
+    .gnb>li{margin:0 8px;}
+    .left,.right{display:none;}
+    #title{
+        display:flex;
+        justify-content:center;
+    }
+    #title>.logo{padding:0;}
+}
