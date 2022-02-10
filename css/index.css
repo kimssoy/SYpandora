@@ -3,16 +3,27 @@ header{
     margin:auto;
 }
 #topNav{
+    line-height:50px;
+    border-bottom:1px solid #999;
+    font-size:12px;
     display:flex;
     justify-content:center;
-    line-height:50px;
-    font-size:12px;
-    border-bottom:1px solid #999;
 }
 .gnb{
     display:flex;
 }
 .gnb>li{margin:0 10px;}
+
+#icon{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+.icon{display:flex;}
+.icon>li{
+    font-size:17px;
+    margin:0 10px;
+}
 
 #title{
     display:flex;
@@ -40,7 +51,7 @@ header{
 }
 
 #contents{
-    max-width:800px;
+    max-width:900px;
     margin:auto;
     padding:40px 0;
 }
@@ -67,7 +78,7 @@ header{
     clear:both;
 }
 .box>.text{
-    padding:0 50px 30px 50px;
+    padding:20px 50px 20px 50px;
 }
 .box>.txt>a{
     display:block;
@@ -77,11 +88,11 @@ header{
 }
 
 .box h3{
-    font-size:17px;
-    padding-bottom:10px;
+    font-size:18px;
+    padding-bottom:15px;
 }
 .box p{
-    font-size:14px;
+    font-size:15px;
 }
 
 .box:nth-child(1){
@@ -91,10 +102,44 @@ header{
     border-bottom:1px solid #999;
 }
 .box:nth-child(3) h3{
-    margin-top:30px;
+    margin-top:10px;
 }
 
 /*====================*/
+/*브라우저의 넓이가 980px 이하 일 때*/
+@media screen and (max-width:980px){
+    .box{
+        width:100%;
+        margin:auto;
+        float:none;
+        text-align:center;
+    }
+    .box:nth-child(1){
+        border:0;
+    }
+    .box:nth-child(2){
+        border:0;
+    }
+    .box:nth-child(3) h3{
+        margin:0;
+    }
+    .box>img{width:300px;}
+    .box>.txt{
+        width:80%;
+        margin:auto;
+        border-bottom:1px solid #999;
+        padding:50px 50px;
+    }
+    .box>.text{
+        width:80%;
+        margin:auto;
+        padding:50px 50px;
+    }
+    .box:nth-child(2)>.text{
+        border-bottom:1px solid #999;
+    }
+}
+
 /*브라우저의 넓이가 768px 이하 일 때*/
 @media screen and (max-width:768px){
     #title{
@@ -106,59 +151,42 @@ header{
     }
     #title p{
         font-size:11px;
-    }
-    #contents{
-        max-width:500px;
-    }
-   
-    .box:nth-child(1){
-        width:100%;
-        margin:auto;
-        border:0;
-    }
-    .box:nth-child(2){
-        border:0;
-    }
-    .box:nth-child(3) h3{
-        margin:0;
-    }
-    .box>.txt{
-        border-bottom:1px solid #999;
-        padding:30px 70px;
-    }
-    .box>.txt>a{font-size:12px;}
-    .box>.text{
-        padding:30px 20px;
-    }
-    .box:nth-child(3)>.text{
-        border-left:1px solid #999;
-    }
-    .box h3{font-size:12px;}
-    .box p{font-size:11px;}
+    }    
 }
+
 /*브라우저의 넓이가 480px 이하 일 때*/
 @media screen and (max-width:480px){
     #topNav{font-size:11px;}
     .gnb>li{margin:0 8px;}
     .left,.right{display:none;}
+
+    #icon{margin-top:20px;}
     #title{
         display:flex;
         justify-content:center;
     }
     #title>.logo{padding:0;}
 
-    .box{
-        width:100%;
-    }
     .box>.txt{
-        padding:30px 40px;
+        width:100%;
+        margin:auto;
+        border-bottom:1px solid #999;
+        padding:50px 40px;
     }
+    .box>.txt>a{font-size:12px;}
     .box>.text{
-        padding:30px 40px;
-        text-align:center;
+        width:100%;
+        margin:auto;
+        padding:50px 40px;
     }
-    .box:nth-child(3)>.text{
-        border:0;
-        border-top:1px solid #999;
+    .box>img{width:250px;}
+    .box h3{
+        font-size:14px;
+    }
+    .box p{
+        font-size:13px;
+    }
+    .box>.txt>a{
+        font-size:12px;
     }
 }
