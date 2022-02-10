@@ -71,15 +71,51 @@ header{
 }
 .box>.txt{
     padding:30px 50px;
+    animation:slide1 0.5s linear;
 }
+@keyframes slide1{
+    0%{
+      transform:translateX(-100%);
+      opacity:0;
+    }
+    100%{
+      transform:translateX(0);
+      opacity:1;
+    }
+  }
+
 .box>.txt::after{
     content:"";
     display:block;
     clear:both;
 }
-.box>.text{
-    padding:20px 50px 20px 50px;
+.box>.text{padding:20px 50px 20px 50px;}
+.box>.right{
+    animation:slide2 0.5s linear;
 }
+@keyframes slide2{
+    0%{
+      transform:translateX(100%);
+      opacity:0;
+    }
+    100%{
+      transform:translateX(0);
+      opacity:1;
+    }
+  }
+  .box>.bottom{
+    animation:slide3 0.5s linear;
+}
+@keyframes slide3{
+    0%{
+      transform:translateY(100%);
+      opacity:0;
+    }
+    100%{
+      transform:translateY(0);
+      opacity:1;
+    }
+  }
 .box>.txt>a{
     display:block;
     float:right;
