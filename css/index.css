@@ -64,6 +64,11 @@ header{
     width:50%;
     float:left;
 }
+.box::after{
+    content:"";
+    display:block;
+    clear:both;
+}
 .box>img{
     display:block;
     margin:auto;
@@ -90,7 +95,7 @@ header{
     clear:both;
 }
 .box>.text{padding:20px 50px 20px 50px;}
-.box>.right{
+.box>.ani2{
     animation:slide2 0.5s linear;
 }
 @keyframes slide2{
@@ -102,8 +107,8 @@ header{
       transform:translateX(0);
       opacity:1;
     }
-  }
-  .box>.bottom{
+}
+.box>.ani3{
     animation:slide3 0.5s linear;
 }
 @keyframes slide3{
@@ -115,7 +120,7 @@ header{
       transform:translateY(0);
       opacity:1;
     }
-  }
+}
 .box>.txt>a{
     display:block;
     float:right;
